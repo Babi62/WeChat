@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const connectionURI = 'mongodb+srv://Boss:boss123456@chatapp.6eashpy.mongodb.net/ChatApp?retryWrites=true&w=majority&appName=ChatApp';
+const connectionURI = process.env.connectionURI;
 const connectDB = async () => {
     try {
         await mongoose.connect(connectionURI);
